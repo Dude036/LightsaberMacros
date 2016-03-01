@@ -55,14 +55,14 @@ Return
 
 F3::												
 {
-	SendInput 031516				;due date
+	SendInput 030116				;due date
 	Send {Enter}
-	SendInput 022316				;bill date
+	SendInput 020916				;bill date
 	Send {Enter}
-	;SendInput 010816				;start date
-	;Send {Enter}
-	;SendInput 020816				;end date
-	;Send {Enter}
+	SendInput 010716				;start date
+	Send {Enter}
+	SendInput 020616				;end date
+	Send {Enter}
 		
 }
 Return
@@ -73,10 +73,12 @@ LAlt & F3::
 	Send {Enter}
 	SendInput 022216				;bill date
 	Send {Enter}
-	;SendInput 012216				;start date
-	;Send {Enter}
-	;SendInput 022216				;end date
-	;Send {Enter}
+	;Send {Tab}
+	;SendInput 31
+	SendInput 011516				;start date
+	Send {Enter}
+	SendInput 021616				;end date
+	Send {Enter}
 		
 }
 Return
@@ -85,7 +87,7 @@ F7::
 {
 	SendInput Username
 	Send {TAB}
-	SendInput Password
+	SendInput password
 	Send {Enter}
 }
 Return
@@ -94,7 +96,7 @@ LAlt & F7::
 {
 	SendInput Username
 	Send {TAB}
-	SendInput Password
+	SendInput password
 	Send {TAB 2}
 	Send {Down}
 	Send {Enter}
@@ -109,7 +111,7 @@ Return
 
 F10::
 {
-	; Some Function should go here
+	; Now that Yoda has a hot key for system Search, use this for deleting bills in Yoda
 }
 Return
 
@@ -127,7 +129,7 @@ F12::
 }
 Return
 
-LControl & NumpadDiv::
+RControl & NumpadDiv::
 {
 	SendInput 2846
 	Send {Enter}
@@ -135,7 +137,7 @@ LControl & NumpadDiv::
 Return
 
 	
-LControl & NumpadMult::
+RControl & NumpadMult::
 {
 	SendInput 1234
 	Send {Enter}
@@ -212,7 +214,7 @@ Return
 RControl & Numpad8::
 {
 	SendInput ^a
-	SendInput [ACTIVATIONS]
+	SendInput [FIX] Meter Update
 }
 Return
 
@@ -220,7 +222,7 @@ Return
 RControl & Numpad9::
 {
 	SendInput ^a
-	SendInput [Image]
+	SendInput [ACTIVATIONS] 
 }
 Return
 
