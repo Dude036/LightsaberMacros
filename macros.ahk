@@ -109,9 +109,45 @@ F9::
 }
 Return
 
+First := true
+
+FirstYoda: 
+	First := false
+	WinActivate, Yoda
+	SendInput ^+s
+	Send {Down 21}
+	Send {Delete}
+	SendInput ^v
+	Send {down}
+	SendInput {Delete}
+	SendInput ^v
+	SendInput !s
+Return
+
+Yoda: 
+	WinActivate, Yoda
+	Send {Escape 2}
+	SendInput ^+s
+	Send {Down 21}
+	Send {Delete}
+	SendInput ^v
+	Send {down}
+	SendInput {Delete}
+	SendInput ^v
+	SendInput !s
+Return
+
 F10::
 {
-	; Now that Yoda has a hot key for system Search, use this for deleting bills in Yoda
+	if WinExist ("ahk_exe C:\Conservice\Conservice.exe") {
+		if (First != false) {
+			Goto FirstYoda
+		} else {
+			Goto Yoda
+		}
+	} else {
+		Run C:\Conservice\Conservice.exe
+	}
 }
 Return
 
