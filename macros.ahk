@@ -179,6 +179,21 @@ RControl & NumpadMult::
 	Send {Enter}
 }
 
+#D::
+{
+	WinActivate, Yoda
+	Send {Escape 2}
+	SendInput ^+s
+	Send {Down 40}
+	SendInput Username
+	Send {Down}
+	FormatTime, Time,, ShortDate
+	Send %Time%
+	Sleep 50
+	SendInput !s
+}
+Return
+
 	;;;;;;;;	ERROR MESSAGES		;;;;;;;;
 
 
