@@ -184,7 +184,8 @@ RControl & NumpadMult::
 
 RControl & NumpadAdd::
 {
-	Send {!u}
+	Send {Tab 11}
+	Send {Enter}
 }
 Return
 
