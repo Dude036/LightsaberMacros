@@ -184,8 +184,7 @@ RControl & NumpadMult::
 
 RControl & NumpadAdd::
 {
-	Send {TAB 7}
-	Send {Enter}
+	Send {!u}
 }
 Return
 
@@ -280,7 +279,7 @@ Keyboard(nCode, wParam, lParam)
        ; Get the virtual key code and the scan code from the key event.
        vk:=NumGet(lParam+0,0)
        ; 27 <=> 1B <=> Escape
-	   ; 222 <=> DE <=>²
+	   ; 222 <=> DE <=>Â²
        If ( (vk != 145) && (vk != 19) )  ;Ignore, 145 is ScrollLock and 19 is Pause
        {
            vk0:=HexDigit(vk,0)
